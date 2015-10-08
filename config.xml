@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.example"
+        versionCode = "10" 
+        version     = "1.0.0" >
+
+
+    <name>CanFly.in</name>
+
+    <description>
+        CanFly
+    </description>
+    <gap:splash src="canflyloader.gif"   />
+	<preference name="SplashScreen" value="screen" />
+	<preference name="SplashScreenDelay" value="10000" />
+    <author href="http://anandhud.com" email="anandhud@unique4m.com">
+        Anandhu Dhanapal 
+    </author>
+    <icon src="canflylogo.png" />
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="Camera">
+	<param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <gap:plugin name="org.apache.cordova.camera" version="0.2.9" />
+
+	<gap:plugin name="org.apache.cordova.dialogs" version="0.2.6" />
+
+	<gap:plugin name="org.apache.cordova.file" version="1.0.1" />
+
+	<gap:plugin name="org.apache.cordova.media-capture" version="0.2.8" />
+
+    <!-- <content src="index.html" /> -->
+    <access origin="*" />
+
+</widget>
