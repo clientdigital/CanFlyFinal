@@ -26,8 +26,22 @@ $(".sliding-div").slideToggle('slow');
 
 });
   </script>-->
+      <style type="text/css">
+        #preloader {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+            background: #f5f5f5 url('canflyloader.gif') no-repeat center center;
+        }
+    </style>
+
 </head>
 <body>
+<div id="preloader"></div>
 	<div class="wrap">
 		<!--<div class="loader">
 			<div class="blink">
@@ -368,6 +382,15 @@ $(".sliding-div").slideToggle('slow');
 		    radioClass: 'iradio_square-yellow'
 		  });
 		});
+		$(document).ready(function ($) {
+        $(window).load(function () {
+            setTimeout(function(){
+                $('#preloader').fadeOut('slow', function () {
+                });
+            },2000);
+
+        });  
+    });    
 	</script>	
 </body>
 </html>
